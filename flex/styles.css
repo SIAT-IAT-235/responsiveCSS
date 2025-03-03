@@ -1,0 +1,84 @@
+/* General styling for containers and items */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+.demo-container {
+  margin-bottom: 2rem; /* Spacing below each demo section */
+  padding: 1rem;
+}
+
+.flex-item {
+  background-color: #f0f0f0; /* Light gray for visibility */
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 0.5rem;
+  text-align: center;
+  font-weight: bold;
+  min-width: 80px; /* A small minimum width to see wrapping in effect */
+}
+
+/* ===========================================
+     1) FLEX-DIRECTION EXAMPLE
+     "display: flex" + "flex-direction"
+     =========================================== */
+.direction-row {
+  display: flex;
+  flex-direction: row; /* Lays items out left-to-right (default) */
+}
+
+.direction-column {
+  display: flex;
+  flex-direction: column; /* Lays items out top-to-bottom */
+}
+
+/* ===========================================
+     2) FLEX-WRAP EXAMPLE
+     "display: flex" + "flex-wrap"
+     =========================================== */
+.wrap-example {
+  display: flex;
+  flex-wrap: wrap;
+  /* 
+      "wrap" allows items to move onto a new line if there's not enough space.
+      "nowrap" is the default (everything tries to fit in one row).
+      "wrap-reverse" wraps in the reverse direction.
+    */
+}
+
+/* ===========================================
+     3) FLEX GROW, SHRINK, BASIS EXAMPLE
+     "flex: grow shrink basis"
+     =========================================== */
+.grow-shrink-container {
+  display: flex;
+  /* 
+      Because we are demonstrating different .flex-item styles,
+      each .flex-item will have a unique flex value (applied inline or via a class).
+    */
+}
+/* 
+    flex: 1 0 auto; => Grows to fill space if available, 
+                      doesn't shrink, default basis (auto).
+  */
+.grow-item {
+  flex: 1 0 auto;
+}
+
+/* 
+    flex: 0 1 auto; => Doesn't grow, can shrink if necessary, default basis.
+  */
+.shrink-item {
+  flex: 0 1 auto;
+}
+
+/* 
+    flex: 2 1 150px; => Grows 2x faster than flex:1, 
+                        can shrink if needed, 
+                        initial basis is 150px.
+  */
+.custom-flex-item {
+  flex: 2 1 150px;
+}

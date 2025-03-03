@@ -1,0 +1,101 @@
+/***************************************************************
+  GLOBAL / SHARED STYLES
+***************************************************************/
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Basic style for grid items */
+.grid-item {
+  background-color: #f0f0f0; /* Light gray background */
+  border: 1px solid #ccc;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/***************************************************************
+    SECTION 1: Basic Grid
+  ***************************************************************/
+/* 
+     grid-basic:
+     - 3 columns, 2 rows, each row is "auto" height
+     - gap: 10px 
+  */
+.grid-basic {
+  display: grid; /* Turns this element into a grid container */
+  grid-template-columns: repeat(3, 1fr); /* 3 columns (each 1fr) */
+  grid-template-rows: repeat(2, auto); /* 2 rows (auto height) */
+  gap: 10px;
+  border: 2px solid #444;
+  padding: 10px;
+}
+
+/***************************************************************
+    SECTION 2: ADVANCED GRID FEATURES
+  ***************************************************************/
+
+/* 
+     grid-demo-1:
+     - Using repeat() with a fixed count.
+     - 3 columns, each 1fr (fraction of remaining space).
+  */
+.grid-demo-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  border: 2px solid #444;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
+
+/* 
+     grid-demo-2:
+     - Using auto-fill and minmax().
+     - Each column is at least 150px wide, but can grow to fill remaining space.
+  */
+.grid-demo-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+  border: 2px solid #444;
+  padding: 10px;
+  margin-bottom: 2rem;
+  max-width: 800px; /* Constrain width so we see columns adjust/responsive */
+}
+
+/*
+     grid-demo-3:
+     - 3 columns (1fr each), 2 rows (100px each).
+     - We'll demonstrate spanning an item across multiple columns/rows.
+  */
+.grid-demo-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  border: 2px solid #444;
+  padding: 10px;
+}
+
+/* Spanning examples */
+.span-column {
+  /* spans columns 1 to 3 => effectively 2 columns wide */
+  grid-column: 1 / 3;
+}
+
+.span-row {
+  /* spans rows 1 to 3 => effectively 2 rows high */
+  grid-row: 1 / 3;
+}

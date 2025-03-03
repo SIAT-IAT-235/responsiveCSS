@@ -1,0 +1,122 @@
+/************************************************
+  GLOBAL / SHARED STYLES
+************************************************/
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  line-height: 1.4;
+}
+
+h1,
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  border: 2px solid #444;
+  padding: 1rem;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+/************************************************
+    1) BASIC MEDIA QUERIES EXAMPLE
+  ************************************************/
+.basic-box {
+  background-color: #f0f0f0; /* Default background */
+  font-size: 1.2rem; /* Default text size */
+}
+
+/* 
+    Media Query 1:
+    If the screen width is 600px or less, apply these changes.
+  */
+@media (max-width: 600px) {
+  .basic-box {
+    background-color: #ffebcc; /* Lighter background color for small screens */
+    font-size: 1rem; /* Slightly smaller text */
+  }
+}
+
+/* 
+    Media Query 2:
+    If the screen width is between 601px and 900px.
+  */
+@media (max-width: 900px) and (min-width: 601px) {
+  .basic-box {
+    background-color: #d3ffc9; /* Another color between 601px and 900px */
+    font-size: 1.1rem;
+  }
+}
+
+/************************************************
+    2) RESPONSIVE FLEX EXAMPLE
+  ************************************************/
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+.flex-item {
+  flex: 1 1 0;
+  margin: 5px;
+  min-width: 100px;
+  background-color: #f0f8ff;
+}
+
+/* 
+    Media Query:
+    Switch to column layout for screens 600px wide or less.
+  */
+@media (max-width: 600px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+/************************************************
+    3) RESPONSIVE GRID EXAMPLE
+  ************************************************/
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns by default */
+  gap: 10px;
+  margin-top: 1rem;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: #e0ffe0;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+/* 
+    For screens 900px wide or less: 2 columns
+  */
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 
+    For screens 600px wide or less: 1 column
+  */
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Flexbox Concepts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style></style>
+  </head>
+  <body>
+    <!--
+    ===========================================
+    FLEX-DIRECTION
+    ===========================================
+  -->
+    <h2>1) Flex Direction</h2>
+    <p>
+      This demo shows items laid out in a row (the default) versus a column by
+      simply changing <code>flex-direction</code>.
+    </p>
+
+    <!-- Container with flex-direction: row -->
+    <div class="demo-container direction-row">
+      <div class="flex-item">Row 1</div>
+      <div class="flex-item">Row 2</div>
+      <div class="flex-item">Row 3</div>
+    </div>
+
+    <!-- Container with flex-direction: column -->
+    <div class="demo-container direction-column">
+      <div class="flex-item">Column 1</div>
+      <div class="flex-item">Column 2</div>
+      <div class="flex-item">Column 3</div>
+    </div>
+
+    <!--
+    ===========================================
+    FLEX-WRAP
+    ===========================================
+  -->
+    <h2>2) Flex Wrap</h2>
+    <p>
+      Here, <code>flex-wrap: wrap;</code> allows items to wrap onto a new line
+      if there isn't enough horizontal space. Resize the browser or adjust the
+      container width to see items wrap.
+    </p>
+
+    <div class="demo-container wrap-example">
+      <!-- Notice the container has a max-width set in CSS, forcing wrapping -->
+      <div class="flex-item">Wrap 1</div>
+      <div class="flex-item">Wrap 2</div>
+      <div class="flex-item">Wrap 3</div>
+      <div class="flex-item">Wrap 4</div>
+      <div class="flex-item">Wrap 5</div>
+      <div class="flex-item">Wrap 6</div>
+      <div class="flex-item">Wrap 7</div>
+      <div class="flex-item">Wrap 8</div>
+    </div>
+
+    <!--
+    ===========================================
+    FLEX: GROW, SHRINK, BASIS
+    ===========================================
+  -->
+    <h2>3) Flex Grow, Shrink, and Basis</h2>
+    <p>
+      Below is a container where each item has a different
+      <code>flex</code> shorthand value: <code>flex: grow shrink basis;</code>.
+    </p>
+    <ul>
+      <li>
+        <strong>.grow-item</strong> uses <code>flex: 1 0 auto;</code>
+        (will grow, won't shrink).
+      </li>
+      <li>
+        <strong>.shrink-item</strong> uses <code>flex: 0 1 auto;</code>
+        (won’t grow, will shrink).
+      </li>
+      <li>
+        <strong>.custom-flex-item</strong> uses
+        <code>flex: 2 1 150px;</code> (grows at twice the rate of a
+        <code>flex:1</code> item, can shrink, initial basis is 150px).
+      </li>
+    </ul>
+    <p>Resize the window to see how these rules affect the item sizes.</p>
+
+    <div class="demo-container grow-shrink-container">
+      <div class="flex-item grow-item">Grow (1 0 auto)</div>
+      <div class="flex-item shrink-item">Shrink (0 1 auto)</div>
+      <div class="flex-item custom-flex-item">Custom (2 1 150px)</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Responsive Design with Media Queries</title>
+    <!-- 
+    The meta viewport tag is crucial for making media queries
+    function correctly on mobile devices, 
+    setting the width of the page to the device width.
+  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Responsive Design with Media Queries</h1>
+    <p>Resize the browser window to see how each section adapts!</p>
+
+    <!-- ========================
+       SECTION 1: BASIC EXAMPLE
+       ======================== -->
+    <section>
+      <h2>1) Basic Media Queries Example</h2>
+      <p>
+        This box changes background color and font size at certain breakpoints
+        (<code>600px</code> and <code>900px</code>).
+      </p>
+      <div class="box basic-box">
+        I'm a box that changes style at different screen widths!
+      </div>
+    </section>
+
+    <!-- ========================
+       SECTION 2: FLEX EXAMPLE
+       ======================== -->
+    <section>
+      <h2>2) Responsive Flex Layout</h2>
+      <p>
+        On larger screens, these items are in a row. On screens 600px or less,
+        they stack in a column.
+      </p>
+      <div class="flex-container">
+        <div class="box flex-item">Item A</div>
+        <div class="box flex-item">Item B</div>
+        <div class="box flex-item">Item C</div>
+      </div>
+    </section>
+
+    <!-- ========================
+       SECTION 3: GRID EXAMPLE
+       ======================== -->
+    <section>
+      <h2>3) Responsive Grid Layout</h2>
+      <p>
+        By default, there are 3 columns. At widths 900px or less, 2 columns. At
+        600px or less, 1 column.
+      </p>
+      <div class="grid-container">
+        <div class="grid-item">Box 1</div>
+        <div class="grid-item">Box 2</div>
+        <div class="grid-item">Box 3</div>
+        <div class="grid-item">Box 4</div>
+        <div class="grid-item">Box 5</div>
+        <div class="grid-item">Box 6</div>
+      </div>
+    </section>
+  </body>
+</html>
